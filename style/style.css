@@ -25,22 +25,6 @@ a:hover {
 
 
 
-/*#wrapper {
-    margin: 10px auto; 
-    width: 80%;
-    display: grid;
-    padding: 30px;
-    background-color: #e9f7fb;
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-    grid-template-rows: auto;
-    grid-gap: 10px;
-    grid-template-areas: 
-        "header header header header"
-        "plus plus minus minus"
-        "kerto kerto jako jako"
-        "footer footer footer footer";
-}
-*/
 
 #wrapper {
     display: grid;
@@ -74,153 +58,170 @@ header h1 {
     margin: 0;
 }
 
-#pluscontainer {
-    
-}
-
-#slide1 {
-    position: fixed;
-    background: #999;
-    width: 250px; 
-    right: -250px; 
-    height: 152px; 
-    transition: right 0.4s ease-in-out;
-}
-
-#slide1 > h3 {
+#plusContainer {
+    grid-area: plus;
+    justify-self: end;
     text-align: center;
     font-family: 'Mali', cursive;
     font-size: 1.5em;
-    color: #FFF;
-    padding: 35px 40px;
+    width: 340px;
+    height: 152px;
+    overflow: hidden;
+    white-space: nowrap;
     text-transform: uppercase;
-} 
-
-#slide1:hover {
-    right: 0px;
-}
-
-.toggle {
-    position: absolute;
-    right: 250px;
-    padding: 10px;
-    background: #ccc;
 }
 
 #plus {
-    grid-area: plus;
+    position: relative;
+    right: -220px;
+    height: 152px;
+    padding: 10px;
+    width: 340px;
+    background-color: #3dca41;
+    color: #ffffff;
+}
+
+
+
+#plus span {
+    padding-left: 30px;
+    padding-right: 50px;
+    font-size: 2em;
+}
+
+#plusContainer div {
+    transition: transform .2s ease-in-out;
+}
+
+#plusContainer div:hover {
+    transform: translate3d(-220px, 0px, 0px);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#miinusContainer {
+    grid-area: minus;
+    justify-self: end;
     text-align: center;
     font-family: 'Mali', cursive;
     font-size: 1.5em;
-    padding: 20px;
-    width: 80px;
-    height: 132px;
-    box-sizing: border-box;
-
+    width: 370px;
+    height: 152px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-transform: uppercase;
 }
-
 
 #miinus {
-    grid-area: minus;
+    position: relative;
+    right: -250px;
+    height: 152px;
+    padding: 10px;
+    width: 370px;
+    background-color: #3daeca;
+    color: #ffffff;
+}
+
+
+
+#miinus span {
+    padding-left: 42px;
+    padding-right: 50px;
+    font-size: 2em;
+}
+
+#miinusContainer div {
+    transition: transform .2s ease-in-out;
+}
+
+#miinusContainer div:hover {
+    transform: translate3d(-250px, 0px, 0px);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#kertoContainer {
+    grid-area: kerto;
+    justify-self: end;
     text-align: center;
     font-family: 'Mali', cursive;
     font-size: 1.5em;
-    padding: 20px;
-    width: 80px;
-    height: 132px;
-    box-sizing: border-box;
-}
-
-#slide2 {
-    position: fixed;
-    background: #999;
-    top: 182px;
-    width: 250px; 
-    right: -250px; 
-    height: 152px; 
-    transition: right 0.4s ease-in-out;
-}
-
-#slide2 > h3 {
-    text-align: center;
-    font-family: 'Mali', cursive;
-    font-size: 1.5em;
-    color: #FFF;
-    padding: 35px 40px;
+    width: 340px;
+    height: 152px;
+    overflow: hidden;
+    white-space: nowrap;
     text-transform: uppercase;
-} 
-
-#slide2:hover {
-    right: 0px;
 }
 
 #kerto {
-    grid-area: kerto;
+    position: relative;
+    right: -220px;
+    height: 152px;
+    padding: 10px;
+    width: 340px;
+    background-color: #ca713d;
+    color: #ffffff;
+}
+
+
+
+#kerto span {
+    padding-left: 10px;
+    padding-right: 50px;
+    font-size: 1.5em;
+}
+
+#kertoContainer div {
+    transition: transform .2s ease-in-out;
+}
+
+#kertoContainer div:hover {
+    transform: translate3d(-220px, 0px, 0px);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#jakoContainer {
+    grid-area: jako;
+    justify-self: end;
     text-align: center;
     font-family: 'Mali', cursive;
     font-size: 1.5em;
-    padding: 20px;
-    width: 80px;
-    height: 132px;
-    box-sizing: border-box;
-}
-
-#slide3 {
-    position: fixed;
-    background: #999;
-    top: 334px;
-    width: 250px; 
-    right: -250px; 
-    height: 152px; 
-    transition: right 0.4s ease-in-out;
-}
-
-#slide3 > h3 {
-    text-align: center;
-    font-family: 'Mali', cursive;
-    font-size: 1.5em;
-    color: #FFF;
-    padding: 35px 40px;
+    width: 340px;
+    height: 152px;
+    overflow: hidden;
+    white-space: nowrap;
     text-transform: uppercase;
-} 
-
-#slide3:hover {
-    right: 0px;
 }
 
 #jako {
-    grid-area: jako;
-    text-align: center;
-    font-family: 'Mali', cursive;
+    position: relative;
+    right: -220px;
+    height: 152px;
+    padding: 10px;
+    width: 340px;
+    background-color: #c8ca3d;
+    color: #ffffff;
+}
+
+
+
+#jako span {
+    padding-left: 10px;
+    padding-right: 50px;
     font-size: 1.5em;
-    padding: 20px;
-    width: 80px;
-    height: 132px;
-    box-sizing: border-box;
 }
 
-#slide4 {
-    position: fixed;
-    background: #999;
-    top: 486px;
-    width: 250px; 
-    right: -250px; 
-    height: 152px; 
-    transition: right 0.4s ease-in-out;
+#jakoContainer div {
+    transition: transform .2s ease-in-out;
 }
 
-#slide4 > h3 {
-    text-align: center;
-    font-family: 'Mali', cursive;
-    font-size: 1.5em;
-    color: #FFF;
-    padding: 35px 40px;
-    text-transform: uppercase;
-} 
-
-#slide4:hover {
-    right: 0px;
+#jakoContainer div:hover {
+    transform: translate3d(-220px, 0px, 0px);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
+
 
 #footer {
     background-color: #51b450;
