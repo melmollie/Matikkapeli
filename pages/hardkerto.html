@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Kertolasku</title>
+    <title>Yhteenlasku</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../style/laskut.css" />
 </head>
@@ -15,21 +15,33 @@
         <nav>
             <ul>
                 <li><a href="../index.html">Koti</a></li>
-                <li><a href="yhteenlasku.html" >Yhteenlasku</a></li>
+                <li><a href="yhteenlasku.html">Yhteenlasku</a></li>
                 <li><a href="vahennyslasku.html">Vähennyslasku</a></li>
                 <li><a href="kertolasku.html" class="active">Kertolasku</a></li>
                 <li><a href="jakolasku.html">Jakolasku</a></li>
             </ul>
         </nav>
         <div id="main">
-            <h3><a href="easykerto.html">Helpot laskut</a></h3> <br />
-            <h3><a href="semikerto.html">Keskivaikeat laskut</a></h3> <br />
-            <h3><a href="hardkerto.html">Vaikeat laskut</a></h3> <br />
+            <div class="takaisin">
+                <a href="yhteenlasku.html" class="takaisin">&larrhk; Takaisin</a>
+            </div>
+
+            <h3>Kerro luvut</h3>
+            <p id="demo"></p> 
+            <input type="number" id="kertolaskuinput"> 
+            <button class="button" onclick="kertoFunction()">Tarkista</button>
+            <br /> 
+            <p id="result">Laske numeroiden tulo.</p>
+            <br /> 
+            <button class="button" onclick="uusiLasku()">Seuraava &rarr;</button>
+            <br />
+            <br />
+            <button class="button2" onclick="oikeaVastaus()">Näytä vastaus</button>
         </div>
         <footer id="footer">
             &copy; Elli Vähäkangas
         </footer>
     </div>
-    <script src="../script/pieniplus.js"></script>
+    <script src="../script/hardkerto.js"></script>
 </body>
 </html>
